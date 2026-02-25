@@ -255,13 +255,15 @@ export default function LucentPage() {
 
       {/* --- SECTION 5: LARGE BILLBOARD --- */}
       <section className="billboard-section relative w-full bg-[#111111] px-10 md:px-12 pt-4 pb-16 z-10 border-none">
-        <div className="reveal-billboard relative w-full max-w-[1400px] mx-auto aspect-video">
-          <div className="relative w-full h-full border border-white/10 bg-[#0a0a0a]">
+        <div className="reveal-billboard relative w-full max-w-[1400px] mx-auto">
+          <div className="relative w-full border border-white/10 bg-[#0a0a0a] overflow-hidden">
             <Image 
               src="/images/11.avif" 
               alt="Lucent Large Billboard" 
-              fill 
-              className="object-cover" 
+              width={1920} 
+              height={1080} 
+              className="w-full h-auto block" 
+              unoptimized
             />
           </div>
         </div>

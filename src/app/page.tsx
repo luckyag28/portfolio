@@ -195,7 +195,8 @@ export default function Home() {
 
       {/* --- SECTION 2: TV LOOP --- */}
       <section className="tv-section relative w-full h-screen bg-[#111111] flex items-center justify-center overflow-hidden pb-20 mt-24 md:mt-40">
-        <div className="tv-container relative w-[85%] max-w-[1000px] flex items-center justify-center">
+      
+        <div className="tv-container relative flex items-center justify-center" style={{ width: "min(1000px, 85vw, 135vh)" }}>
           <video className="absolute z-0 object-cover rounded-[3%]" style={{ top: "14%", left: "5%", width: "77%", height: "70%" }} src="/videos/tv-loop.mp4" autoPlay loop muted playsInline />
           <Image src="/images/tv.png" alt="Retro TV" width={1200} height={800} className="relative z-10 w-full h-auto pointer-events-none" priority />
         </div>

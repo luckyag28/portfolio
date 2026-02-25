@@ -6,6 +6,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { markLandingPlayed } from "@/app/page";
+import { useRouter } from "next/navigation";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -13,6 +15,7 @@ if (typeof window !== "undefined") {
 
 export default function AboutPage() {
   const container = useRef(null);
+  const router = useRouter();
 
   useGSAP(() => {
    
@@ -66,8 +69,7 @@ export default function AboutPage() {
       gsap.ticker.add(updateScroll);
       gsap.delayedCall(1.5, () => gsap.ticker.remove(updateScroll));
     } else {
-     
-      window.location.href = `/#${targetId}`;
+      router.push(`/#${targetId}`);
     }
   };
 
@@ -93,7 +95,7 @@ export default function AboutPage() {
 
         <nav className="absolute top-8 left-10 right-10 md:top-10 md:left-12 md:right-12 flex justify-between items-start z-50 mix-blend-difference text-white uppercase tracking-widest">
           <div className="w-1/3 text-left text-[14px] md:text-[20px]">
-             <Link href="/" className="hover:text-gray-300 transition-colors">LUCKY NAVIN AGRAWAL</Link>
+             <Link href="/" onClick={markLandingPlayed} className="hover:text-gray-300 transition-colors">LUCKY NAVIN AGRAWAL</Link>
           </div>
           <div className="w-1/3 flex justify-center gap-12 text-[14px] md:text-[20px] text-gray-200">
             <Link href="/" className="hover:text-white transition-opacity">HOME</Link>
