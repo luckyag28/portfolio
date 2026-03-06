@@ -245,9 +245,10 @@ export default function AboutPage() {
 
               <div className="mt-auto pt-16 md:pt-0">
                 <a 
-                  href="/resume.pdf" 
+                  href="/Lucky_Navin_Agrawal_Resume.pdf" 
                   target="_blank" 
-                  rel="noopener noreferrer" 
+                  rel="noopener noreferrer"
+                  download="Lucky_Navin_Agrawal_Resume.pdf" 
                   className="inline-block border border-white/40 px-6 py-2 text-white uppercase tracking-widest text-[16px] md:text-[18px] hover:bg-white hover:text-black transition-colors duration-300"
                 >
                   DOWNLOAD RESUME
